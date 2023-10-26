@@ -35,6 +35,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -170,16 +172,14 @@ header .container {
 /* ===============Hero section======== */
 
 .section-hero {
-  padding: 188px 472px 292px 472px;
-  width: 1440px;
+  display: flex;
+  text-align: center;
+  align-items: center;
   height: 600px;
-  flex-shrink: 0;
   background-color: #2e2f42;
 }
 
 .main-title {
-  text-align: center;
-  display: flex;
   width: 496px;
   height: 120px;
   font-size: 56px;
@@ -219,16 +219,15 @@ header .container {
   width: calc((1158px - 24px * 3) / 4);
 }
 
-
-.list-benefits {}
-
-.benefits-title {
+.section-card-title {
+  margin-bottom: 8px;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
+
 
 /* ===============/BENEFITS======== */
 
@@ -239,44 +238,82 @@ header .container {
 }
 
 .our-team {
+  margin-bottom: 69px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
 
-.team-cards {
-  background-color: #ffffff;
+.list-team {
+  display: flex;
+  column-gap: 24px;
+  
 }
+
+.team-img {
+  padding-bottom: 32px;
+}
+
+.team-cards {
+  text-align: center;
+  align-items: center;
+  width: calc((1128px - 72px) / 4);
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--WHITE, #FFF);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
+}
+
 
 .team-profess {
   font-size: 16px;
+  margin-bottom: 32px;
 }
 
 /* ============/OUR TEAM =========== */
 
 /*========= OUR PORTFOLIO================= */
 
-.cards-portfolio {
+.list-portfolio {
+  display: flex;
+  column-gap: 24px;
+  flex-wrap: wrap;
+}
+
+.portfolio-items {
+  width: calc((1128px - 72px) / 3);
+  border: 1px solid var(--CORNFLOWER, #E7E9FC);
+  background: var(--WHITE, #ffffff);
+  margin-bottom: 48px;
+}
+
+.cards-portfolio { 
+  margin-bottom: 72px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
 
-.name-applikation {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+.portfolio-img {
+  padding-bottom: 32px;
 }
 
-.type-app {}
+.portfolio-cards-title {
+  padding: 0px 16px;
+}
+
+.type-app {
+  padding: 0px 16px 32px 16px;
+}
 
 /*==========/OUR PORTFOLIO================= */
 
 /* =============FOOTER========== */
 
 .main-foot {
+  padding: 100px 1020px 100px 156px;
+  height: 312px;
   background-color: #2e2f42;
 }
 
@@ -285,7 +322,10 @@ header .container {
 }
 
 .copiright {
+  width: 264px;
+  height: 72px;
   color: #f4f4fd;
+  margin-top: 17.5px;
 }
 
 .logotype-footer {
