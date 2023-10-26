@@ -41,6 +41,7 @@ img {
 
 button {
   cursor: pointer;
+  
 }
 
 h2 {
@@ -54,8 +55,7 @@ h2 {
 
 .container {
   max-width: 1158px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -72,9 +72,6 @@ h2 {
   overflow: hidden;
 }
 
-.padd-section {
-  padding: 120px 156px;
-}
 
 /* ===============/main styles======== */
 
@@ -137,6 +134,10 @@ h2 {
   color: #404bbf;
 }
 
+.link-contacts:not(:last-child) {
+  margin-right: 40px;
+}
+
 .nav-list {
   display: flex;
   align-items: center;
@@ -144,7 +145,14 @@ h2 {
 
 .nav-list {
   display: flex;
-  column-gap: 40px;
+}
+
+.nav-main-links:not(:last-child) {
+  margin-right: 40px;
+}
+
+.top-page {
+  padding: 24px 0;
 }
 
 .contacts {
@@ -165,6 +173,8 @@ header .container {
 
 .top-page {
   padding: 24px 15px;
+  border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
+  background: var(--WHITE, #ffffff);
 }
 
 /* ===============/Main header======== */
@@ -175,12 +185,13 @@ header .container {
   display: flex;
   text-align: center;
   align-items: center;
+  padding: 188px 0;
   height: 600px;
   background-color: #2e2f42;
 }
 
 .main-title {
-  width: 496px;
+  max-width: 496px;
   height: 120px;
   font-size: 56px;
   line-height: 1.07;
@@ -189,11 +200,15 @@ header .container {
 }
 
 .order-button {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
   margin-top: 46px;
   margin-left: auto;
   margin-right: auto;
   padding: 16px 32px;
-  display: flex;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -210,6 +225,9 @@ header .container {
 /* ===============/Hero section======== */
 
 /* ============BENEFITS =========== */
+.our-advantages {
+  padding: 120px 0;
+}
 .list-benefits {
   display: flex;
   gap: 24px;
@@ -234,11 +252,12 @@ header .container {
 /* ============OUR TEAM =========== */
 
 .section-team {
+  padding: 120px 0;
   background-color: #f4f4fd;
 }
 
 .our-team {
-  margin-bottom: 69px;
+  margin-bottom: 72px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
@@ -246,18 +265,21 @@ header .container {
 
 .list-team {
   display: flex;
-  column-gap: 24px;
-  
 }
 
-.team-img {
-  padding-bottom: 32px;
+.team-cards:not(:last-child) {
+  margin-right: 24px;
+}
+
+.team-name {
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-cards {
   text-align: center;
   align-items: center;
-  width: calc((1128px - 72px) / 4);
+  width: calc((100% - 72px) / 4);
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   background: var(--WHITE, #FFF);
@@ -265,27 +287,35 @@ header .container {
 
 }
 
+.user-profile {
+  padding: 32px 0;
+
+}
 
 .team-profess {
+  text-align: center;
   font-size: 16px;
-  margin-bottom: 32px;
 }
 
 /* ============/OUR TEAM =========== */
 
 /*========= OUR PORTFOLIO================= */
 
+.section-portfolio {
+  padding: 120px 0;
+}
+
 .list-portfolio {
   display: flex;
-  column-gap: 24px;
   flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-items {
-  width: calc((1128px - 72px) / 3);
-  border: 1px solid var(--CORNFLOWER, #E7E9FC);
-  background: var(--WHITE, #ffffff);
-  margin-bottom: 48px;
+  width: calc((100% - 48px) / 3);
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .cards-portfolio { 
@@ -295,24 +325,19 @@ header .container {
   color: #2e2f42;
 }
 
-.portfolio-img {
-  padding-bottom: 32px;
+.name-app {
+  padding: 32px 16px;
 }
 
 .portfolio-cards-title {
-  padding: 0px 16px;
+  margin-bottom: 8px;
 }
-
-.type-app {
-  padding: 0px 16px 32px 16px;
-}
-
 /*==========/OUR PORTFOLIO================= */
 
 /* =============FOOTER========== */
 
 .main-foot {
-  padding: 100px 1020px 100px 156px;
+  padding: 100px 0;
   height: 312px;
   background-color: #2e2f42;
 }
@@ -325,10 +350,11 @@ header .container {
   width: 264px;
   height: 72px;
   color: #f4f4fd;
-  margin-top: 17.5px;
 }
 
 .logotype-footer {
+  display: inline-block;
+  margin-bottom: 16px;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 700;
